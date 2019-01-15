@@ -13,5 +13,6 @@ class EmailParser
   def parse
     parse = @email.split(" ")
     parser = parse.collect {|email| email.delete(",")}
+    parser.uniq
   end
   end
